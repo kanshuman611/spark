@@ -1,0 +1,66 @@
+/* Center everything */
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f3f3f3;
+  margin: 0;
+  padding: 50px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#ai-character {
+  font-size: 100px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+#ai-character.talking {
+  animation: talkingAnimation 0.6s infinite;
+}
+
+@keyframes talkingAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#ai-character.idle::after {
+  content: "💤";
+  display: block;
+  font-size: 24px;
+  color: gray;
+}
+
+#mic-button {
+  font-size: 20px;
+  padding: 10px 30px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#mic-button:hover {
+  background-color: #45a049;
+}
+
+#response {
+  margin-top: 20px;
+  font-size: 18px;
+}
